@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import hero_bg from "../../imgs/hero_bg.jpg";
-import hero_03 from "../../imgs/hero_05.jpg";
+import hero_03 from "../../imgs/bg_02.jpg";
 
 const Herov2 = () => {
   useEffect(() => {
@@ -22,7 +22,7 @@ const Herov2 = () => {
       <div>
         <img
           id="parallax-image"
-          className="opacity-20 w-full h-[100%] absolute top-0"
+          className="opacity-50 w-full h-[100%] absolute top-0"
           src={hero_03}
           alt=""
         />
