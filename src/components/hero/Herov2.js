@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import hero_bg from "../../imgs/hero_bg.jpg";
-import hero_03 from "../../imgs/bg_02.jpg";
+
+import hero_03 from "../../imgs/space_01.jpg";
 
 const Herov2 = () => {
   useEffect(() => {
@@ -18,11 +18,14 @@ const Herov2 = () => {
   }, []);
 
   return (
-    <div className=" h-screen w-full relative flex flex-col justify-center ">
-      <div>
+    <div className=" h-screen w-full relative flex flex-col justify-center bg-black ">
+      <div
+        className="flex items-center justify-center 
+      "
+      >
         <img
           id="parallax-image"
-          className="opacity-50 w-full h-[100%] absolute top-0"
+          className="opacity-50  h-[100%] absolute top-0"
           src={hero_03}
           alt=""
         />

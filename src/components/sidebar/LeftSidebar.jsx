@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BiHomeSmile } from "react-icons/bi";
-import { AiOutlineHome, AiOutlineMenuUnfold } from "react-icons/ai";
+import { AiOutlineHome } from "react-icons/ai";
 import {
   BsFacebook,
   BsLinkedin,
@@ -18,7 +18,7 @@ const LeftSidebar = () => {
   const handleOnClickMobileMenu = () => {
     setShowMobileMenu(!showMobileMenu);
   };
-  console.log(showMobileMenu);
+
   return (
     <div className="flex flex-col z-20">
       <div className="md:hidden flex flex-row items-center mt-5 ml-5 fixed text-white z-30">

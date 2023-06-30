@@ -1,43 +1,40 @@
-import React from "react";
-import hero_bg from "../../imgs/hero_bg.jpg";
+import React, { useState } from "react";
+
 import { BiChevronDown } from "react-icons/bi";
+import InfoModal from "../InfoModal";
+import LinkText from "../LinkText";
 
-const myWorkData = [
-  {
-    title: "My Toys",
-    thumbnail: { hero_bg },
-    description: "Full stack e-commerce with backend and frontend",
-    technologies: [
-      "React",
-      "Bootstrap",
-      "Redux",
-      "NodeJS",
-      "MongoDB",
-      "Express",
-      "Stripe",
-    ],
-    link: "https://nicowiranata.dev",
-  },
-];
+const WorkCard = ({ works }) => {
+  const [visible, setVisible] = useState(false);
+  const [modalItem, setModalItem] = useState({});
 
-const WorkCard = () => {
+  const handleOnClick = (item) => {
+    setModalItem(item);
+    setVisible(!visible);
+  };
+
   return (
     <>
-      {myWorkData.map((item, i) => (
+      {works.map((item, i) => (
         <div className="group bg-zinc-900 col-span relative h-[12vw]" key={i}>
+          <InfoModal
+            item={modalItem}
+            visible={visible}
+            setVisible={setVisible}
+          />
           <img
             className="
-cursor-pointer
-object-cover
-transition
-duration
-shadow-xl
-rounded-md
-group-hover:opacity-90
-sm:group-hover:opacity-0
-delay-300
-w-full
-h-[12vw] 
+                cursor-pointer
+                object-cover
+                transition
+                duration
+                shadow-xl
+                rounded-md
+                group-hover:opacity-90
+                sm:group-hover:opacity-0
+                delay-300
+                w-full
+                h-[12vw] 
 "
             src={item.thumbnail}
             alt="myWorkTumbnail"
@@ -90,7 +87,7 @@ rounded-b-md
             >
               <div className="flex flex-col gap-3">
                 <div className="flex flex-row mt-4 gap-2 items-center">
-                  <p className="text-white text-sm lg:text-base">
+                  <p className="text-neutral-500 text-sm lg:text-base">
                     {item.title}
                   </p>
                   <div
@@ -106,6 +103,7 @@ rounded-b-md
       transition
       hover:border-neutral-300
       "
+                    onClick={() => handleOnClick(item)}
                   >
                     <BiChevronDown
                       className="text-white hover:text-neutral-300"
@@ -118,7 +116,11 @@ rounded-b-md
                     {item.description}
                   </p>
                   <p className="text-white text-sm lg:text-base cursor-pointer">
-                    <a href={item.link}>{item.link}</a>
+                    <LinkText link={item.link} />
+                  </p>
+                  <p className="text-white text-sm lg:text-base">
+                    Built with:
+                    {item.technologies}
                   </p>
                 </div>
               </div>

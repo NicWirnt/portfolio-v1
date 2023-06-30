@@ -1,5 +1,5 @@
 import React from "react";
-import { AiFillCloseCircle } from "react-icons/ai";
+
 import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
 const MobileMenu = ({ showMobileMenu }) => {
   if (!showMobileMenu) {
