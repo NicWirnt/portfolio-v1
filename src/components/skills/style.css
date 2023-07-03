@@ -4,6 +4,7 @@
   font-weight: 700;
   overflow: hidden;
   z-index: 1;
+  transition: color 0.5s ease-in-out;
 }
 
 .slide::before {
@@ -19,10 +20,19 @@
   z-index: -1;
 }
 
+.slide:hover {
+  color: black;
+}
+
 .slide:hover::before {
   height: 200%;
 }
 
+.slide.hidden {
+  color: black;
+  transition: color 0.5s ease-in-out;
+}
 .slide:hover .hidden {
   display: block;
+  color: whitesmoke;
 }

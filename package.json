@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@fontsource/shadows-into-light": "^5.0.3",
     "@fontsource/unica-one": "^5.0.3",
     "@testing-library/jest-dom": "^5.16.5",
@@ -14,7 +15,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.9.0",
     "react-parallax": "^3.5.1",
-    "react-router-dom": "^6.11.1",
+    "react-router-dom": "^6.14.1",
     "react-scripts": "^5.0.1",
     "react-type-animation": "^3.1.0",
     "web-vitals": "^2.1.4"

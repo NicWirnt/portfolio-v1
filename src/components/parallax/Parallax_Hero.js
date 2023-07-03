@@ -38,10 +38,13 @@ const Parallax_Hero = () => {
       strength={400}
       blur={{ min: -15, max: 15 }}
     >
-      <div className=" h-screen w-full relative flex flex-col justify-center drop-shadow-2xl">
+      <div
+        className=" h-screen w-full relative flex flex-col justify-center drop-shadow-2xl"
+        id="hero"
+      >
         <div className="text-white mt-5 font-serif flex justify-center items-center flex-col z-20">
           <div>
-            <span className="font-mono">NICO WIRANATA</span>
+            <span className="font-mono text-[#EB5939]">NICO WIRANATA</span>
           </div>
 
           <div className="hero-text">

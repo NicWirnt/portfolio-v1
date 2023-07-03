@@ -116,7 +116,12 @@ rounded-b-md
                     {item.description}
                   </p>
                   <p className="text-white text-sm lg:text-base cursor-pointer">
-                    <LinkText link={item.link} />
+                    <LinkText link={item.link} text={item.title} />
+                    {item.linkAdmin ? (
+                      <LinkText link={item.linkAdmin} text="admin page" />
+                    ) : (
+                      ""
+                    )}
                   </p>
                   <p className="text-white text-sm lg:text-base">
                     Built with:

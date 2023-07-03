@@ -7,7 +7,7 @@ const InfoModal = ({ item, visible, setVisible }) => {
   const handleOnClose = () => {
     setVisible(!visible);
   };
-  console.log(item);
+
   if (!visible) {
     return null;
   }

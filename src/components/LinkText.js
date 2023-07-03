@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineLink } from "react-icons/ai";
 
-const LinkText = ({ link }) => {
+const LinkText = ({ link, text }) => {
   return (
     <a
       href={link}
@@ -9,7 +9,7 @@ const LinkText = ({ link }) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      Visit
+      Visit {text}
       <AiOutlineLink className="ml-2" />
     </a>
   );
