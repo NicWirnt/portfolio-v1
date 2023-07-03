@@ -36,7 +36,7 @@ const Skills = () => {
         <div className="slide flex flex-row items-center justify-between ">
           <span className="ml-8 mr-8 md:ml-44">FUN</span>
           <span className="text-sm md:text-lg hidden">
-            don't forget to have all the fun!
+            don't forget to have all the fun building!!
           </span>
         </div>
       </div>
